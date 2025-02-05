@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
-    <meta name="google-site-verification" content="Ke50sjxpVovfHkRe9NBPlGeUzunVQnYtG9gxKMojXBE" />
     <title>G&S Advogadas Associadas</title>
-    <link rel="shortcut icon" href="assets/imgs/index/Logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/imgs/index/new-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/links/bootstrap/css/bootstrap.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="assets/css/style.css">
@@ -16,13 +15,13 @@
 
     <!-- HEADER -->
     <header class="main-header">
-        <nav class="navbar header-nav navbar-expand-lg" role="navigation" aria-label="Menu principal">
+        <nav class="navbar header-nav navbar-expand-lg" aria-label="Menu principal">
             <div class="container">
-                <a href="#home"><img src="assets/imgs/index/Logo.png" alt="Logo Genehr & Strapazzon"></a>
+                <a href="#home"><img src="assets/imgs/index/new-logo.png" alt="Logo Genehr & Strapazzon"></a>
 
                 <!-- MENU -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse-toggle">
-                    <ul class="navbar-nav mx-auto">
+                    <ul class="navbar-nav mx-auto" role="menu">
                         <li>
                             <a href="#home" class="nav-link" data-scroll-nav="0" role="menuitem" aria-label="Ir para a seção Home">HOME</a>
                         </li>
@@ -71,15 +70,30 @@
         <i class="bx bxl-whatsapp"></i>
     </a>
 
+    <div id="aviso-importante" class="aviso-container">
+        <h2>Comunicado Importante!</h2>
+        <p>Prezados clientes, fiquem atentos aos dados oficiais do nosso escritório!
+            Nosso número é <span class="highlight">(051) 99655-0203</span> - Qualquer outro número deve ser desconsiderado.
+            Nosso meio de pagamento via PIX é através do banco Sicredi, na pessoa jurídica Genehr & Strapazzon
+            Advogadas, CNPJ 53.653.958/0001-48. <span class="highlight">Por favor, não efetue qualquer pagamento para outras contas.</span><br>
+            Qualquer dúvida, ficamos à disposição!
+        </p>
+        <button id="fechar-aviso">Entendi</button>
+    </div>
+    
+    <div id="icone-aviso" class="icone-aviso">
+        ❕
+    </div>
+
     <!-- HOME SECTION DESIGN -->
-    <section id="home" class="home-section bg-gray" data-scroll-index="0" role="region" aria-label="Seção inicial">
+    <section id="home" class="home-section bg-gray" data-scroll-index="0" aria-label="Seção inicial">
         <div class="home-content">
             <img src="assets/imgs/index/logo-home.png" alt="Logo Genehr & Strapazzon">
         </div>
     </section>
 
     <!-- ATENDIMENTO --> 
-    <section class="atendimento" id="home" data-scroll-index="0" aria-labelledby="escritorio-title">
+    <section class="atendimento" id="home-atendimento" data-scroll-index="0" aria-labelledby="home-atendimento">
         <div class="atendimento-content">
             <h2 class="heading">Assessoria Jurídica em todo o Brasil</h2>
             <p>Com a virtualização dos processos, ou seja, processos eletrônicos, audiências virtuais e 
@@ -94,6 +108,7 @@
                    Clique aqui para falar no WhatsApp
                 </a>
              </p>
+
         </div>
 
         <div class="atendimento-img">
@@ -102,7 +117,7 @@
     </section>
 
     <!-- QUEM SOMOS DESIGN --> 
-    <section class="escritorio" id="escritorio" data-scroll-index="1" aria-labelledby="escritorio-title">
+    <section class="escritorio" id="escritorio" data-scroll-index="1" aria-labelledby="escritorio">
         <div class="escritorio-img">
             <img src="assets/imgs/index/escritorio.png" alt="Foto das sócias do Escritório Genehr & Strapazzon">
         </div>
@@ -119,13 +134,13 @@
     </section>
 
     <!-- ÁREAS DE ATUAÇÃO DESIGN -->
-    <section id="areas-atuacao" class="section bg-gray" data-scroll-index="2" aria-labelledby="areas-title">
+    <section id="areas-atuacao" class="section bg-gray" data-scroll-index="2" aria-labelledby="areas-atuacao">
         <div class="container">
             <div class="section-heading">
                 <h3 class="heading">ÁREAS DE ATUAÇÃO</h3>
             </div>
             <div class="row gy-4">
-                <div class="col-sm-6 col-12" role="region" aria-labelledby="trabalhista-title">
+                <div class="col-sm-6 col-12" role="region">
                     <div class="feature-box-container">
                         <div class="feature-box">
                             <div class="feature-box-front trabalhista">
@@ -145,7 +160,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-12" role="region" aria-labelledby="civil-title">
+                <div class="col-sm-6 col-12" role="region">
                     <div class="feature-box-container">
                         <div class="feature-box">
                             <div class="feature-box-front civil">
@@ -165,7 +180,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-12" role="region" aria-labelledby="consumidor-title">
+                <div class="col-sm-6 col-12" role="region">
                     <div class="feature-box-container">
                         <div class="feature-box">
                             <div class="feature-box-front consumidor">
@@ -183,7 +198,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-12" role="region" aria-labelledby="bancario-title">
+                <div class="col-sm-6 col-12" role="region">
                     <div class="feature-box-container">
                         <div class="feature-box">
                             <div class="feature-box-front bancario">                                
@@ -210,7 +225,7 @@
     </section>
 
     <!-- SOBRE NÓS DESIGN -->
-    <section class="sobre-nos" id="sobre-nos" data-scroll-index="3" aria-labelledby="sobre-nos-title">
+    <section class="sobre-nos" id="sobre-nos" data-scroll-index="3" aria-labelledby="sobre-nos">
         <h2 class="heading">SOBRE NÓS</h2>
         
         <div class="sobre-nos-content">
@@ -249,23 +264,23 @@
 
         <div class="blog-container">
             <div class="blog-box">
-                <img src="assets/imgs/blog/post 6_acordojudicial.png" alt="">
+                <img src="assets/imgs/blog/post7_conselhotutelar.png" alt="">
+                <div class="blog-layer">
+                    <a href="post7.html" class="btn-more">Saiba Mais</a>
+                </div>
+            </div>
+
+            <div class="blog-box">
+                <img src="assets/imgs/blog/post6_acordojudicial.png" alt="">
                 <div class="blog-layer">
                     <a href="post6.html" class="btn-more">Saiba Mais</a>
                 </div>
             </div>
 
             <div class="blog-box">
-                <img src="assets/imgs/blog/post 5_acordoextra.png" alt="">
+                <img src="assets/imgs/blog/post5_acordoextra.png" alt="">
                 <div class="blog-layer">
                     <a href="post5.html" class="btn-more">Saiba Mais</a>
-                </div>
-            </div>
-
-            <div class="blog-box">
-                <img src="assets/imgs/blog/post 4_tuteladeurgencia.png" alt="">
-                <div class="blog-layer">
-                    <a href="post4.html" class="btn-more">Saiba Mais</a>
                 </div>
             </div>
         </div>
@@ -276,7 +291,7 @@
     </section>  
 
     <!-- CONTATO DESIGN -->
-    <section id="contato" class="contato bg-dark" data-scroll-index="5" role="region" aria-labelledby="contato-title">
+    <section id="contato" class="contato bg-dark" data-scroll-index="5" aria-labelledby="contato">
         <div class="contato-container">
             <div class="row gy-5">
                 <div class="col-lg-6">
@@ -342,7 +357,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="icon bg-1" aria-required="true">
+                            <div class="icon bg-1" aria-hidden="true">
                                 <i class='bx bxs-group'></i>
                             </div>
                             <div class="col ps-3">
@@ -357,7 +372,7 @@
     </section>
 
 <!-- FOOTER DESIGN -->
-    <footer class="footer" role="contentinfo">
+    <footer class="footer">
        <div class="footer-container">
             <div class="footer-content">
                 <div class="social-icons">
@@ -376,8 +391,8 @@
     </footer>
 
     <script src="assets/links/jquery/jquery-3.7.1.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="assets/links/one-page/scrollIt.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="assets/links/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>

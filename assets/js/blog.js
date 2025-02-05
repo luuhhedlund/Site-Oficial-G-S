@@ -1,53 +1,49 @@
-// WINDOW SCROLL
-$(window).on("scroll", function() {
-    var scrollTop = $(window).scrollTop();
-    if(scrollTop >= 100) {
-        $('body').addClass('fixed-header');
-    } else {
-        $('body').removeClass('fixed-header')
-    }
-});
+$(document).ready(function () {
+    // WINDOW SCROLL
+    $(window).on("scroll", function () {
+        $("body").toggleClass("fixed-header", $(window).scrollTop() >= 100);
+    });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const loadMoreButton = document.getElementById('loadMore');
-    const blogContainer = document.getElementById('blogContainer');
-    const cards = blogContainer.querySelectorAll('.card');
-    let currentCardCount = 4; 
+    // BLOG - LOAD MORE
+    var loadMoreButton = document.getElementById("loadMore");
+    var blogContainer = document.getElementById("blogContainer");
 
-    function updateCardDisplay() {
-        cards.forEach((card, index) => {
-            if (index < currentCardCount) {
-                card.style.display = 'flex'; 
-            } else {
-                card.style.display = 'none';
-            }
+    if (loadMoreButton && blogContainer) {
+        var cards = blogContainer.querySelectorAll(".card");
+        var currentCardCount = 4;
+
+        function updateCardDisplay() {
+            cards.forEach(function (card, index) {
+                card.style.display = index < currentCardCount ? "flex" : "none";
+            });
+
+            loadMoreButton.style.display = currentCardCount >= cards.length ? "none" : "block";
+        }
+
+        updateCardDisplay();
+
+        loadMoreButton.addEventListener("click", function () {
+            currentCardCount += 4;
+            updateCardDisplay();
         });
     }
 
-    updateCardDisplay();
-
-    loadMoreButton.addEventListener('click', () => {
-        currentCardCount += 4;
-
-        updateCardDisplay(); 
-
-        if (currentCardCount >= cards.length) {
-            loadMoreButton.style.display = 'none';
-        }
+    // SCROLL REVEAL CONFIG
+    var sr = ScrollReveal({
+        reset: true,
+        distance: "80px",
+        duration: 2500,
+        delay: 200
     });
-});
 
-ScrollReveal({ 
-    reset: true,
-    distance: '80px',
-    duration: 2500,
-    delay: 200
-});
+    sr.reveal(".home-content img", { origin: "top" });
+    sr.reveal(".heading", { origin: "bottom" });
 
-ScrollReveal().reveal('.home-content img', { origin: 'top' });
-ScrollReveal().reveal('.heading', { origin: 'bottom' });
-
-$.scrollIt({
-    easing: 'linear',
-    topOffset: -70
+    // SCROLL IT
+    if ($.scrollIt) {
+        $.scrollIt({
+            easing: "linear",
+            topOffset: -70
+        });
+    }
 });
